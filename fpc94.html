@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPC 94</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">"
+    <link rel="stylesheet" src="/stylesheets/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <!--<h1>Service Worker Caching</h1>
+        <div class="logo">
+            <img src="/images/fly.jpg" />
+            <img src="https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search-v2_297x176.jpg" />
+        </div>-->
+
+        <h1 class="text-center">FPC94 - Hazard Report Part A</h1>
+        <div class="text-center mx-auto">
+            <form action="/fpc94" id="fpc94">
+                <div class="text-left">
+                    <label for="hazardNo">HAZARD No. (OSHE use only)</label><br>
+                    <input class="form-control" type="text" name="hazardNo" placeholder="Hazard No."><br><br>
+                </div>
+                <div class="text-left">
+                    <label class="text-left" for="date">DATE</label><br>
+                    <input class="form-control" type="date" name="date" placeholder="Date"><br><br>
+                </div>
+
+                <div class="text-left">
+                    <label for="time">TIME</label><br>
+                    <input class="form-control" type="time" name="time" placeholder="Time"><br><br>
+                </div>
+
+                <div class="text-left">
+                    <label for="fullname">FULL NAME (employee reporting hazard)</label><br>
+                    <input class="form-control" type="text" name="fullname" placeholder="Full Name"><br><br>
+                </div>
+
+                <div class="text-left">
+                    <label for="companyname">COMPANY NAME (FPC, Contractor, Stakeholder)</label><br>
+                    <input class="form-control" type="text" name="companyname" placeholder="Company Name"><br><br>
+                </div>
+
+                <div class="text-left">
+                    <label for="branch">BRANCH (that the Hazard is relate to)</label><br>
+                    <input class="form-control" type="text" name="branch" placeholder="Branch"><br><br>
+                </div>
+
+                <div class="text-left">
+                    <label for="contactNo">CONTACT No.</label><br>
+                    <input class="form-control" type="number" name="contactNo" placeholder="Contact No."><br><br>
+                </div>
+
+                <div class="text-left">
+                    <label for="office">OFFICE / COUPE / PLANTATION NAME</label><br>
+                    <input class="form-control" type="text" name="office" placeholder="Office/Coupe/Plantation Name"><br><br>
+                </div>
+
+                <div class="text-left">
+                    <label for="hazardLoc">HAZARD LOCATION</label><br>
+                    <input class="form-control" type="text" name="hazardLoc" placeholder="Hazard Location"><br><br>
+                </div>
+
+                <!--<label for="confidentialNature">Is this Hazard Report of a confidential nature?</label><br>
+        <input type="text" name="confidentialNature" placeholder="Confidential Nature?"><br><br>-->
+                <div class="text-left">
+                    <label for="confidentialNature">Is this Hazard Report of a confidential nature?</label><br>
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <input type="radio" id="confidentialNature-yes" name="confidentialNature" value="yes">
+                            <label for="confidentialNature-yes">Yes</label>
+                        </div>
+                        <div class="col-sm-1">
+                            <input type="radio" id="confidentialNature-no" name="confidentialNature" value="no">
+                            <label for="confidentialNature-no">No</label><br><br>
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <label for="hazardDescription">HAZARD DESCRIPTION - What is the problem? (Give as much detail as possible.
+            e.g. slip/trip/fall, poor ergonomics, manual handling, chemical or dangerous tree(s))</label><br>
+                        <input class="form-control" type="text" name="hazardDescription" placeholder="Hazard Description"><br><br>
+                    </div>
+
+                    <div class="text-left">
+                        <label for="hazardWhy">WHY IS IT A HAZARD?  
+            (e.g. could result in lacerated or amputated fingers/hand or cause a vehicle accident resulting in an injury)</label><br>
+                        <input class="form-control" type="text" name="hazardWhy" placeholder="Why is it a Hazard?"><br><br>
+                    </div>
+
+                    <div class="text-left">
+                        <label for="immediateAction">IMMEDIATE ACTION(S) 
+            (List immediate actions taken to remove or rectify the hazard?)</label><br>
+                        <input class="form-control" type="text" name="immediateAction" placeholder="Immediate Action(s)?"><br><br>
+                    </div>
+
+                    <h3>Hazard Notification</h3>
+                    <h5>WHO did you notify?</h5>
+                    <!--<div class="row justify-content-center">-->
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label for="notifyName">Name</label><br>
+                            <input class="form-control" type="text" name="notifyName" placeholder="Who did you notify?"><br><br>
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-3">
+                            <label for="notifyContact">Contact No.</label><br>
+                            <input class="form-control" type="text" name="notifyContact" placeholder="Contact No.">
+                        </div>
+                    </div><br><br>
+
+                    <h5>WHEN were they notified?</h5>
+                    <!--<div class="row justify-content-center">-->
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label for="notifyDate">Date</label><br>
+                            <input class="form-control" type="text" name="notifyDate" placeholder="Date"><br><br>
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-3">
+                            <label for="notifyTime">Time</label><br>
+                            <input class="form-control" type="text" name="notifyTime" placeholder="Time"><br><br>
+                        </div>
+                    </div>
+
+                    <div class="text-left">
+                        <label for="hazardWitness">Did anyone else SEE the Hazard? (List their name, employment position and what company they are from if not FPC)</label><br>
+                        <input class="form-control" type="text" name="hazardWitness"><br><br>
+                    </div>
+
+                    <div class="text-left">
+                        <label for="riskRating">
+                        <h3>RISK RATING OF POTENTIAL RISK (IF WE DON’T DO ANYTHING ABOUT THE HAZARD)?</h3>
+                        (Use risk matrix below to rate the potential risk of the hazard)
+                        </label>
+                        <br>
+                        <input class="form-control" type="text" name="riskRating"><br><br>
+                    </div>
+
+                    <div class="text-left">
+                        <label for="actions"><h4>WHAT ACTIONS DO YOU BELIEVE COULD BE IMPLEMENTED TO ELIMINATE OR CONTROL THE RISK?</h4></label><br>
+                        <textarea class="form-control" type="text" name="actions" form="fpc94"></textarea><br><br>
+                    </div>
+                    <input class="form-control" type="submit" value="Submit">
+
+            </form>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="/js/main.js"></script>
+</body>
+
+</html>
