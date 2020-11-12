@@ -1,6 +1,6 @@
 var cacheName = 'fpc-forms';
 var filesToCache = [
-    //'/'
+    './'
     /*,
         './index.html',
         './fpc94.html',
